@@ -1,4 +1,4 @@
-package br.com.alura.codechella.naousar.model;
+package br.com.alura.codechella.notuse.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

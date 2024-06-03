@@ -1,7 +1,7 @@
-package br.com.alura.codechella.naousar.controller;
+package br.com.alura.codechella.notuse.controller;
 
-import br.com.alura.codechella.naousar.model.Usuario;
-import br.com.alura.codechella.naousar.service.UsuarioService;
+import br.com.alura.codechella.notuse.model.Usuario;
+import br.com.alura.codechella.notuse.service.UsuarioService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
