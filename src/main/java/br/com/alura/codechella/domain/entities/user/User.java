@@ -1,10 +1,22 @@
-package br.com.alura.codechella.domain;
+package br.com.alura.codechella.domain.entities.user;
 
 import java.time.LocalDate;
 
 public class User {
     private String name;
     private String cpf;
+    private LocalDate birth; // Data de nascimento
+    private String email;
+
+    public User(String name, String cpf, LocalDate birth, String email) {
+        if(cpf == null || !cpf.matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}")){
+            throw new IllegalArgumentException("cpf nao encontrado!");
+        }
+        this.name = name;
+        this.cpf = cpf;
+        this.birth = birth;
+        this.email = email;
+    }
 
     public LocalDate getBirth() {
         return birth;
@@ -37,7 +49,4 @@ public class User {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-
-    private LocalDate birth; // Data de nascimento
-    private String email;
 }
