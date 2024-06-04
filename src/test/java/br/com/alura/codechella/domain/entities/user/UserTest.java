@@ -17,4 +17,17 @@ public class UserTest {
         Assertions.assertThrows(IllegalArgumentException.class,
                 () -> new User("Allan", "", LocalDate.parse("2003-09-09"),"email@email.com"));
     }
+
+    @Test       //deveCriarUsuarioUsandoFabricaDeUsuario
+    public void mustCreateUserUsingUserFactory(){
+        UserFactory factory = new UserFactory();
+        User user = factory.withNameCpfBirth("Allan", "123.456.789-21",
+                LocalDate.parse("2003-09-09"));
+
+        Assertions.assertEquals(user.getName(),"Allan");
+
+        user = factory.includedAddress("89300-000", 0,"apt");
+        Assertions.assertEquals("apt",user.getAddress().getComplement());
+    }
+
 }
