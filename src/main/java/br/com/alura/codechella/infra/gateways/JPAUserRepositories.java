@@ -29,4 +29,9 @@ public class JPAUserRepositories implements UserRepository {
 //        return List.of();
         return null;
     }
+
+    @Override
+    public void save(UserEntity entity) {
+
+    }
 }
